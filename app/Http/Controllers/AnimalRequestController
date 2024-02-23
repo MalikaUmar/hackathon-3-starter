@@ -1,0 +1,27 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\Animal;
+use App\Models\Owner;
+
+use Illuminate\Http\Request;
+
+class AnimalRequestController extends Controller
+{
+      public function index()  
+
+    {
+        $animal_requests=AnimalRequest::
+    
+        $animal_types = Animal:: orderBy('name', 'asc') 
+        ->get();
+
+        return view('animal_list.index',compact('animal_requests', 'animal_types'));
+    
+    }
+    
+}
+
+
+
